@@ -1,0 +1,71 @@
+---
+title: "FML 1"
+output:
+  html_document: default
+  pdf_document: default
+date: "2023-09-09"
+---
+
+```{r}
+PALLAVIDATA<-read.csv("C:/Users/palla/OneDrive/Desktop/Assignments/FML/1st assignment/supermarket_sales - Sheet1.csv")
+PALLAVIDATA
+```
+ī
+```{r}
+summary(PALLAVIDATA)
+mean(PALLAVIDATA$Total)
+```
+Ī
+```{r}
+median(PALLAVIDATA$Total)
+min(PALLAVIDATA$Total)
+max(PALLAVIDATA$Total)
+sd(PALLAVIDATA$Total)
+var(PALLAVIDATA$Total)
+sum(PALLAVIDATA$Total)
+str(PALLAVIDATA$Total)
+```
+
+#part3**- descriptive  statistics for categorical variables
+```{r}
+table(PALLAVIDATA$Customer.type)
+```
+
+
+```{r}
+table(PALLAVIDATA$Total)
+```
+ĪĪ
+```{r}
+str(PALLAVIDATA$City)
+```
+#**part4-transforming the variables
+
+```{r}
+log(PALLAVIDATA$Tax.5.)
+```
+
+
+```{r}
+log(PALLAVIDATA$Unit.price)
+```
+
+
+```{r}
+d<-PALLAVIDATA$Unit.price-mean(PALLAVIDATA$Unit.price)/sd(PALLAVIDATA$Unit.price)
+
+d
+
+```
+#part5-plotting one variable
+
+```{r}
+pie(PALLAVIDATA$Quantity,main="PIE OF QUANTITY")
+```
+
+#part6 - scatterplot
+
+```{r}
+plot(PALLAVIDATA$Quantity,PALLAVIDATA$Unit.price,main="scatterplot")
+```
+
